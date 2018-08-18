@@ -1,0 +1,23 @@
+{
+  "timeZone": "America/Sao_Paulo",
+  "dependencies": {
+    "libraries": [{
+      "userSymbol": "OAuth2",
+      "libraryId": "1B7FSrk5Zi6L1rSxxTDgDEUsPzlukDsi4KGuTMorsTQHhGBzBkMun4iDF",
+      "version": "26"
+    }]
+  },
+  "dataStudio": {
+    "name": "Asana",
+    "logoUrl": "https://luna1.co/232620.png",
+    "company": "Felippe F. Caso",
+    "companyUrl": "http://felippecaso.xyz/?utm_source=google&utm_medium=data-studio&utm_campaign=company-url",
+    "addonUrl": "http://felippecaso.xyz/asana-data-studio-connector.html/?utm_source=google&utm_medium=data-studio&utm_campaign=addon-url",
+    "supportUrl": "http://felippecaso.xyz/asana-data-studio-connector.html/?utm_source=google&utm_medium=data-studio&utm_campaign=support-url",
+    "description": "Asana connector lets you connect to your tasks in Asana automatically. You will need an Asana account to use this connector. Create your free account at https://asana.com/",
+    "sources": ["ASANA"],
+    "shortDescription": "Connect to your Asana account and import tasks for a specific project",
+    "authType": ["OAUTH2"],
+    "feeType": ["FREE"]
+  }
+}
