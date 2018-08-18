@@ -4,7 +4,7 @@ function getAsanaService() {
   // scope of the property store.
   return OAuth2.createService('asana')
 
-      // Set the endpoint URLs, which are the same for all Google services.
+      // Set the endpoint URLs
       .setAuthorizationBaseUrl('https://app.asana.com/-/oauth_authorize')
       .setTokenUrl('https://app.asana.com/-/oauth_token')
 
@@ -19,7 +19,7 @@ function getAsanaService() {
       // Set the property store where authorized tokens should be persisted.
       .setPropertyStore(PropertiesService.getUserProperties())
   
-      // Set minutes for a year
+      // Set minutes for a year so that the connection does not expire
       .setExpirationMinutes(525600)
 
 };

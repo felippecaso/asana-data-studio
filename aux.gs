@@ -1,3 +1,4 @@
+/** Function to format task data as desired for the connector. */
 function transformData (eachParsedResponse) {
   adjResponse = eachParsedResponse;
   

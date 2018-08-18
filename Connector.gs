@@ -1,8 +1,10 @@
+/** Function that returns the authentication type. */
 function getAuthType() {
   var response = { type: 'OAUTH2' };
   return response;
 };
 
+/** Function that returns config data. */
 function getConfig(request) {
   var config = {
     configParams: [
@@ -23,6 +25,7 @@ function getConfig(request) {
   return config;
 };
 
+/* Creating schema for Asana Tasks. */
 var asanaSchema = [
   {
     name: 'name',
@@ -86,8 +89,6 @@ function getData(request) {
       }
     }
   });
-  
-  //Logger.log(JSON.parse(PropertiesService.getUserProperties().getProperties()['oauth2.asana'])['access_token']);
    
   // Fetch and parse data from API  
   var settings = {
