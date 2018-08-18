@@ -27,7 +27,7 @@ function getAsanaService() {
 function authCallback(request) {
   var authorized = getAsanaService().handleCallback(request);
   if (authorized) {
-    return HtmlService.createHtmlOutput('Success! You can close this tab.' + PropertiesService.getUserProperties());
+    return HtmlService.createHtmlOutput('Success! You can close this tab.');
   } else {
     return HtmlService.createHtmlOutput('Denied. You can close this tab.');
   };
