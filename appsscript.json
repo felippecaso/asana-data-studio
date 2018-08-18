@@ -1,4 +1,5 @@
 {
+  "urlFetchWhitelist": ["https://app.asana.com/api/"],
   "timeZone": "America/Sao_Paulo",
   "dependencies": {
     "libraries": [{
