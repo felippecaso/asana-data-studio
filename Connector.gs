@@ -107,6 +107,8 @@ function getData(request) {
     parsedResponse = JSON.parse(response).data;
   } catch(e) {
     resetAuth();
+    logConnectorError(e, 'data_fetch_error'); // Log to Stackdriver.
+    throwConnectorError("There was an error requesting data. Please try again.", true);
     Logger.log(e);
   };
  
@@ -149,4 +151,36 @@ function getData(request) {
     schema: requestedSchema,
     rows: requestedData
   };
+};
+
+/**
+* Throws an error that complies with the community connector spec.
+* @param {string} message The error message.
+* @param {boolean} userSafe Determines whether this message is safe to show
+*     to non-admin users of the connector. true to show the message, false
+*     otherwise. false by default.
+*/
+function throwConnectorError(message, userSafe) {
+  userSafe = (typeof userSafe !== 'undefined' &&
+              typeof userSafe === 'boolean') ?  userSafe : false;
+  if (userSafe) {
+    message = 'DS_USER:' + message;
+  }
+  
+  throw new Error(message);
+};
+
+/**
+* Log an error that complies with the community connector spec.
+* @param {Error} originalError The original error that occurred.
+* @param {string} message Additional details about the error to include in
+*    the log entry.
+*/
+function logConnectorError(originalError, message) {
+  var logEntry = [
+    'Original error (Message): ',
+    originalError,
+    '(', message, ')'
+  ];
+  console.error(logEntry.join('')); // Log to Stackdriver.
 };
