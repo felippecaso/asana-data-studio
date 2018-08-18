@@ -19,6 +19,9 @@
     "sources": ["ASANA"],
     "shortDescription": "Connect to your Asana account and import tasks for a specific project",
     "authType": ["OAUTH2"],
-    "feeType": ["FREE"]
+    "feeType": ["FREE"],
+    "templates": {
+      "default": "1aKdb9GFa98GWC6UOYnJIQZRM1QWWt1nl"
+    }
   }
 }
